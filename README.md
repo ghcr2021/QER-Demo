@@ -27,3 +27,23 @@ You can verify the algorithmic logic immediately using the provided demo script.
 ### 2. Run the Verification Demo
 ```bash
 python demo_toy.py
+
+### 3. Expected Output
+The script will simulate the interaction loop, store experiences, and perform quantum state updates. You will see logs confirming the amplitude changes:
+[4] Testing Quantum Priority Update (Prepare/Depreciate)...
+    -> Quantum state before update: [0.70710678 0.70710678] (Amplitude |b1|^2 = 0.5000)
+    -> Quantum state after update:  [0.605... 0.796...] (Amplitude |b1|^2 = 0.633...)
+    -> VERIFIED: Amplitude increased/maintained for high TD error (Prepare Operation works).
+SUCCESS: QER Mechanism Verified Reproducible.
+
+🎥 Visual Demonstrations
+The following GIFs demonstrate the QER-LPD3QN planner in action within dynamic environments ("Rotating Broom" and "Dynamic Traffic" scenarios).
+
+Scenario 1: Dynamic Obstacle Avoidance
+(The agent successfully predicts and avoids moving obstacles)
+
+Scenario 2: Complex Interaction
+(Navigation through dense dynamic flows with 0 collisions)
+
+⚠️ Note on Full System
+This repository focuses on the algorithmic contribution (QER). The full navigation stack involves proprietary hardware interfaces, ROS nodes, and specific simulation environments (Gym/Gazebo extensions) that are not included here to maintain a clean and runnable reproduction of the core methodology.
